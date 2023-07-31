@@ -48,6 +48,11 @@ interface Commands {
     returnType: Bidi.Script.AddPreloadScriptResult;
   };
 
+  'browser.close': {
+    params: Record<string, never>;
+    returnType: Bidi.EmptyResult;
+  };
+
   'browsingContext.create': {
     params: Bidi.BrowsingContext.CreateParameters;
     returnType: Bidi.BrowsingContext.CreateResult;
