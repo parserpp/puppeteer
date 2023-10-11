@@ -181,7 +181,8 @@ export class FirefoxLauncher extends ProductLauncher {
         this.actualBrowserRevision = installedFirefox.buildId;
       }
     }
-    return this.resolveExecutablePath();
+    // TODO: headless should not matter for Firefox.
+    return this.resolveExecutablePath(false);
   }
 
   override defaultArgs(options: BrowserLaunchArgumentOptions = {}): string[] {

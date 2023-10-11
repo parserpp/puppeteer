@@ -396,7 +396,7 @@ export class ProductLauncher {
   /**
    * @internal
    */
-  protected resolveExecutablePath(): string {
+  protected resolveExecutablePath(headless: boolean | 'new'): string {
     let executablePath = this.puppeteer.configuration.executablePath;
     if (executablePath) {
       if (!existsSync(executablePath)) {
@@ -410,6 +410,9 @@ export class ProductLauncher {
     function productToBrowser(product?: Product) {
       switch (product) {
         case 'chrome':
+          if (headless === true) {
+            return InstalledBrowser.CHROMEHEADLESSSHELL;
+          }
           return InstalledBrowser.CHROME;
         case 'firefox':
           return InstalledBrowser.FIREFOX;
