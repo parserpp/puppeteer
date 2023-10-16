@@ -18,7 +18,6 @@ import type {Readable} from 'stream';
 
 import type * as Bidi from 'chromium-bidi/lib/cjs/protocol/protocol.js';
 import type Protocol from 'devtools-protocol';
-import {firstValueFrom, from, raceWith} from 'rxjs';
 
 import {firstValueFrom, from, raceWith} from '../../third_party/rxjs/rxjs.js';
 import type {CDPSession} from '../api/CDPSession.js';
@@ -52,7 +51,6 @@ import {
   validateDialogType,
   waitForHTTP,
 } from '../common/util.js';
-import {timeout} from '../common/util.js';
 import type {Viewport} from '../common/Viewport.js';
 import {assert} from '../util/assert.js';
 import {Deferred} from '../util/Deferred.js';
