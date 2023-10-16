@@ -1741,11 +1741,12 @@ export abstract class Page extends EventEmitter<PageEvents> {
   /**
    * @internal
    */
-  protected async _waitForNetworkIdle(
+  async _waitForNetworkIdle(
     networkManager: BidiNetworkManager | CdpNetworkManager,
     idleTime: number,
     ms: number,
-    closedDeferred: Deferred<TargetCloseError>
+    closedDeferred: Deferred<TargetCloseError>,
+    requestsInFlight = 0
   ): Promise<void> {
     await firstValueFrom(
       merge(
@@ -1764,7 +1765,7 @@ export abstract class Page extends EventEmitter<PageEvents> {
       ).pipe(
         startWith(null),
         filter(() => {
-          return networkManager.inFlightRequestsCount() === 0;
+          return networkManager.inFlightRequestsCount() <= requestsInFlight;
         }),
         switchMap(v => {
           return of(v).pipe(delay(idleTime));

@@ -798,31 +798,7 @@
     "expectations": ["FAIL"]
   },
   {
-    "testIdPattern": "[navigation.spec] navigation Page.goto should navigate to empty page with networkidle0",
-    "platforms": ["darwin", "linux", "win32"],
-    "parameters": ["webDriverBiDi"],
-    "expectations": ["FAIL"]
-  },
-  {
-    "testIdPattern": "[navigation.spec] navigation Page.goto should navigate to empty page with networkidle2",
-    "platforms": ["darwin", "linux", "win32"],
-    "parameters": ["webDriverBiDi"],
-    "expectations": ["FAIL"]
-  },
-  {
-    "testIdPattern": "[navigation.spec] navigation Page.goto should navigate to page with iframe and networkidle0",
-    "platforms": ["darwin", "linux", "win32"],
-    "parameters": ["webDriverBiDi"],
-    "expectations": ["FAIL"]
-  },
-  {
     "testIdPattern": "[navigation.spec] navigation Page.goto should send referer",
-    "platforms": ["darwin", "linux", "win32"],
-    "parameters": ["webDriverBiDi"],
-    "expectations": ["FAIL"]
-  },
-  {
-    "testIdPattern": "[navigation.spec] navigation Page.goto should wait for network idle to succeed navigation",
     "platforms": ["darwin", "linux", "win32"],
     "parameters": ["webDriverBiDi"],
     "expectations": ["FAIL"]
