@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/puppeteer/puppeteer/compare/testserver-v0.6.0...testserver-v0.6.1) (2023-10-17)
+
+
+### Reverts
+
+* "ci: try to fix request timeouts ([#11183](https://github.com/puppeteer/puppeteer/issues/11183))" ([#11184](https://github.com/puppeteer/puppeteer/issues/11184)) ([20ee325](https://github.com/puppeteer/puppeteer/commit/20ee325e623a4576daeaae4ed3e3831d37782043))
+
 ## [0.6.0](https://github.com/puppeteer/puppeteer/compare/testserver-v0.5.0...testserver-v0.6.0) (2022-10-05)
 
 
